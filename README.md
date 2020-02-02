@@ -6,7 +6,6 @@ In this app, i am going to use fundamental HTML, CSS, and JavaScript and local s
     * [x] JSON parse and strigify
     * [x] Resposive for 768px Device
     * [x] Resposive for 980px Device
-    * [x] Resposive for 375px Device
     * [x] Using addEventListner strategy
     * [x] Good naming convention practice
     * [x] Spacing and indentation practice

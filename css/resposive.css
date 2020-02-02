@@ -1,0 +1,27 @@
+
+
+@media only screen and (max-width: 980px){
+
+    .main-container {
+     width: 900px;
+        
+    }
+    .fa-refresh{
+        margin-left: 300px;
+        margin-top: -70px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+    .main-container {
+     width: 730px;
+     margin-left: 60px;
+        
+    }
+    .fa-refresh{
+        margin-left: 600px;
+    }
+}
+
+
