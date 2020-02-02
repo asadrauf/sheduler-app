@@ -4,154 +4,189 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Scheduler App</title>
 
+   <!-------------------Link to Custom CSS-------------------------->
+    <link rel="stylesheet" href="./css/style.css" />
+   <!-------------------Link to Bootstrap--------------------------->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-------------------Link to FontAwsome------------------------->
+   <!-------------------Link to FontAwsome-------------------------->
     <script src="https://kit.fontawesome.com/5c588c8e4c.js" crossorigin="anonymous"></script>
-    
-    <title>Todo List</title>
   </head>
+
+   <!----------------------Start of the body------------------------>
  
   <body onload="get(),get1(),get2(),get3(),get4(),get5(),get6(),get7(),get8(),get9()">
    
    <section class="main-container">
+
+   <!----------------------Title Area------------------------------->
     <section class="title-area" id="title">
       <div class="row">
-          <div class="col-md-12 site-title py-6">
+         <div class="col-md-12 site-title py-6">
             <h1 class="title-text">Work Day Scheduler</h1>
             <p class="para">A simple app for scheduling your work day</p>
-          </div> 
+         </div> 
+   <!------------Will diplay current date in this div---------------->      
           <div id="date">
   
           </div>
+   <!---------Geenerating clear button to clear local storage--------->
           <div class="clear">
             <i class="fa fa-refresh fa-3x" onclick="clearLocalStorage();"></i>
-        </div>
+          </div>
       </div>
   </section>
+
+  <!--------Creating our inputs that will hold all our daily time base tasks------------------->
     <section class="daily-event" id="dailyEvent">
-        <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">8AM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text"  placeholder="What needs to be done?" name="dailyTask" class="input-field" id="todo-text" />
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save();"></i>
-        </div>
-      </section>
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">9AM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text1" class="input-field" />
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save1();"></i>
-        </div>
-      </section>
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">10AM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text2" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save2()"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">11AM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text3" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save3" onclick="save3();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">12AM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text4" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save4" onclick="save4();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">1PM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text5" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save5();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">2PM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text6" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save6();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">3PM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text7" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save7();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">4PM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text8" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save8();"></i>
-        </div>
-      </section>
-
-      <section class="row">
-        <div class="col-md-2">
-           <p class="time w-50 h-55 py-2  border border-left-0">5PM</p>
-        </div>
-        <div id="todo-list" class="col-md-8">
-           <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text9" class="input-field"/>
-        </div>
-        <div class="col-md-2">
-           <i class="fas fa-save fa-3x" id="save" onclick="save9();"></i>
-        </div>
-      </section>
-    </section>
     
-  </section>
+   <!-- First input field    -->
+   <section class="row">
+       <div class="col-md-2">
+       <p class="time w-50 h-55 py-2  border border-left-0">8AM</p>
+       </div>
+       <div id="todo-list" class="col-md-8">
+       <input  type="text"  placeholder="What needs to be done?" name="dailyTask" class="input-field" id="todo-text" />
+       </div>
+       <div class="col-md-2">
+       <i class="fas fa-save fa-3x" id="save" onclick="save();"></i>
+       </div>
+   </section>
+   <!-- 1st of input field    -->
+
+   <!-- 2nd input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">9AM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text1" class="input-field" />
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save1();"></i>
+        </div>
+   </section>
+   <!-- End of 2nd input field    -->
+
+   <!-- 3rd input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">10AM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text2" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save2()"></i>
+        </div>
+   </section>
+   <!-- End of 3rd input field    -->
+
+   <!-- 4th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">11AM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text3" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save3" onclick="save3();"></i>
+        </div>
+   </section>
+   <!-- End of 4th input field    -->
+
+   <!-- 5th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">12AM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text4" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save4" onclick="save4();"></i>
+        </div>
+   </section>
+   <!-- End of 5th input field    -->
+
+   <!-- 6th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">1PM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text5" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save5();"></i>
+        </div>
+   </section>
+   <!-- End of 6th input field    -->
+
+   <!-- 7th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">2PM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text6" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save6();"></i>
+        </div>
+   </section>
+   <!-- End of 7th input field    -->
+
+   <!-- 8th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">3PM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text7" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save7();"></i>
+        </div>
+   </section>
+   <!-- End of 8th input field    -->
+
+   <!-- 9th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">4PM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text8" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save8();"></i>
+        </div>
+   </section>
+   <!-- End of 9th input field    -->
+
+   <!-- 10th input field    -->
+   <section class="row">
+        <div class="col-md-2">
+        <p class="time w-50 h-55 py-2  border border-left-0">5PM</p>
+        </div>
+        <div id="todo-list" class="col-md-8">
+        <input  type="text" placeholder="What needs to be done?" name="dailyTask" id="todo-text9" class="input-field"/>
+        </div>
+        <div class="col-md-2">
+        <i class="fas fa-save fa-3x" id="save" onclick="save9();"></i>
+        </div>
+   </section>
+   <!-- End of 10th input field    -->
+</section>
+
+    <!-- End of main content    -->
+</section>
+
+<!--------Linking here our javascript file------------->
   <script src="script.js"></script>
   </body>
 </html>

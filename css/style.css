@@ -1,3 +1,4 @@
+/* Start Of the Styling */
 *,
 *::before,
 *::after {
@@ -9,6 +10,7 @@ body {
   font-size: 16px;
 }
 
+/* Start Of the main-container */
 .main-container{
   box-shadow: black 5px soli;
   width: 980px;
@@ -27,10 +29,10 @@ body {
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
   0 100px 80px rgba(0, 0, 0, 0.12)
 ;
-  /* background-image: url("./img/halftone.png"); */
- 
 }
+/* End Of the main-container */
 
+/* Start Of the title area */
 .title-area{
   height: 150px;
   background-color: #abcdff;
@@ -47,31 +49,34 @@ body {
   margin-left: 35.3%;
 }
 
-#date{
+ #date{
   margin-left: 44%;
 }
 
-.row{
+ .row{
   margin-top: -15px;
 }
 
-.input-field{
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  font-size: 1.3em;
-  background-color: #77b5fe;
-  color: hsl(0deg, 100%, 100%);
-  border-radius: 5px;
-  
+/* End Of the title area */
+
+/* Start Of the input fields */
+ .input-field{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 1.3em;
+    background-color: #77b5fe;
+    color: hsl(0deg, 100%, 100%);
+    border-radius: 5px;
 }
+/* End Of the Input Fileds */
 
-.border-left-0{
-  border-radius: 5px;
-  color: #66b4ff;
-
+/* Styling the hourly time */
+ .border-left-0{
+    border-radius: 5px;
+    color: #66b4ff;
 }
 
 .fa-save{
